@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>AccountsDataTableController</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>accountsDataTable</members>
         <name>LightningComponentBundle</name>
     </types>
+    <types>
+        <members>Iris_Accounts_Table</members> 
+        <name>CustomTab</name> 
+    </types>
+    <types>
+        <members>Accounts_Data_Table_Fields.Account_Fields__c</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Accounts_Data_Table_Fields__mdt</members>
+        <name>CustomObject</name>
+    </types>
+
     <version>55.0</version>
 </Package>
