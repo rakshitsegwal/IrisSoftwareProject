@@ -1,18 +1,30 @@
-# Salesforce DX Project: Next Steps
+# IRIS Softwrae Project:
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+In this project i have created a LWC to fetch all the accounts in a data table using Apex. Features:
+1. The columns are not hard coded for the table there is a custom metadata setting that controls the columns to show bassed on **API names of fields** in a comma seperation **no space should be given** for example you can use Name,Industry,AnnualRevenue,Rating.
+2. Pagination on the data is done with navigation buttons and rcords count
+3. search can be done on the table
+4. Inline edit could be done and records could be edited on the table.
+5. Sorting of columns is implemented.
 
-## How Do You Plan to Deploy Your Changes?
+# How to Deploy
+1.This repo has only one branch named feature/AccountDataTable.
+2.In your VS code set this as a active branch and set a default org in which you want to deploy it.
+3. Once the above step is done navigate to package.xml file which resides inside manifest folder
+4. right click on the file and click **Deploy This Source to Org**
+5. Deployment SHould be done
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+If you do not use VS code you can simply deploy manually by finding files in the **/force-app** folder either via workbench or any other tool that you are comfortable with.
 
-## Configure Your Salesforce DX Project
+**List of components**
+**Apex** AccountsDataTableController.cls
+**LWC** accountsDataTable
+**objects** Accounts_Data_Table_Fields__mdt.object-meta.xml
+**Lightning Tab** Iris_Accounts_Table.tab-meta.xml
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+**IMPORTANT** Post deployment, The Tab Deployed is by default hidden please enable its visibility at profile level under the **Custom Tab Settings**. The Tab name is **Iris Accounts Table**
 
-## Read All About It
+Once done simply click on the Waffle/App Drawer on the top left corner and type the tab name and it should show the table.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+
