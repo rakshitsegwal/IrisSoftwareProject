@@ -8,8 +8,9 @@ In this project i have created a LWC to fetch all the accounts in a data table u
 5. Sorting of columns is implemented.
 
 # How to Deploy
-1.This repo has only one branch named feature/AccountDataTable.
-2.In your VS code set this as a active branch and set a default org in which you want to deploy it.
+
+1. This repo has only one branch named feature/AccountDataTable.
+2. In your VS code set this as a active branch and set a default org in which you want to deploy it.
 3. Once the above step is done navigate to package.xml file which resides inside manifest folder
 4. right click on the file and click **Deploy This Source to Org**
 5. Deployment SHould be done
