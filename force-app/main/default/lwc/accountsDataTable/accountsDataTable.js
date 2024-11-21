@@ -14,6 +14,10 @@ export default class AccountsDataTable extends LightningElement {
     @track searchKey = ''; //search input 
     @track filteredData = []; //filter data on input handling
 
+    //for sorting.
+    @track sortBy;
+    @track sortDirection;
+
 
     connectedCallback() {
         this.loadLatestData();
@@ -33,8 +37,8 @@ export default class AccountsDataTable extends LightningElement {
                 this.columns = data.columnInfo.map(column => ({
                     label: column.columnName,
                     fieldName: column.columnApiName,
-                    sortable: true,
-                    editable: true
+                    editable: column.columnApiName === 'AnnualRevenue' ? true : false,
+                    sortable: true
 
                 }));
 
@@ -134,6 +138,34 @@ export default class AccountsDataTable extends LightningElement {
         this.currentPage = 1; // Reset to the first page
         this.updatePagination();
     }
+
+    //sorting
+    doSorting(event) {
+        this.sortBy = event.detail.fieldName;
+        this.sortDirection = event.detail.sortDirection;
+        this.sortData(this.sortBy, this.sortDirection);
+    }
+
+    sortData(fieldname, direction) {
+    let parseData = JSON.parse(JSON.stringify(this.filteredData));
+
+    let keyValue = (a) => {
+        return a[fieldname];
+    };
+
+    let isReverse = direction === 'asc' ? 1 : -1;
+
+    parseData.sort((x, y) => {
+        // Convert both x and y to lowercase for case-insensitive comparison
+        x = keyValue(x) ? String(keyValue(x)).toLowerCase() : '';
+        y = keyValue(y) ? String(keyValue(y)).toLowerCase() : '';
+
+        return isReverse * ((x > y) - (y > x)); // sorting based on direction
+    });
+
+    this.filteredData = parseData;
+    this.updatePagination();
+    }   
 
     // generic toast messages method.
     showToast(title, message, variant) {

@@ -17,7 +17,11 @@
          data={paginatedData}
          columns={columns}
          draft-values={draftValues}
-         onsave={handleSave}>
+         onsave={handleSave}
+         onsort={doSorting}
+         sorted-by={sortBy}
+         sorted-direction={sortDirection}
+         hide-checkbox-column="true">
       </lightning-datatable>
       <!-- Pagination and Save Controls -->
       <div class="slds-grid slds-grid_align-spread slds-m-top_medium">
