@@ -1,0 +1,38 @@
+<template>
+    <template if:true={showClgForm}>
+        <lightning-card title= "Insert Student Data" icon-name="standard:account">
+        <div class="slds-p-around_x-small">
+            <lightning-input label="Student Name" value='' onchange={handleValueEntered}></lightning-input>
+            <lightning-input label="Department" value='' onchange={handleValueEntered}></lightning-input>
+            <lightning-input label="Phone" value='' onchange={handleValueEntered}></lightning-input><br/>
+            <lightning-button label="Save" onclick={insertFormRecords}></lightning-button>
+   
+        </div>
+    </lightning-card>
+    </template>
+
+     <template if:true={ShowFresherFrom}>
+        <lightning-card title= "Insert Candidate Data" icon-name="standard:contact">
+        <div class="slds-p-around_x-small">
+            <lightning-input label="Candidate Name" value='' onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Pass Out Year" value='' onchange={handleDesChange}></lightning-input>
+            <lightning-input label="Phone" value='' onchange={handlePhnChange}></lightning-input><br/>
+            <lightning-button label="Save" onclick={handleClick}></lightning-button>
+   
+        </div>
+    </lightning-card>
+    </template>
+
+     <template if:true={ShowExpForm}>
+        <lightning-card title= "Insert Applicant Data" icon-name="standard:opportunity">
+        <div class="slds-p-around_x-small">
+            <lightning-input label="Applicant Name" value='' onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Experience(No. Of Years" value='' onchange={handleDesChange}></lightning-input>
+            <lightning-input label="Phone" value='' onchange={handlePhnChange}></lightning-input><br/>
+            <lightning-button label="Save" onclick={handleClick}></lightning-button>
+   
+        </div>
+    </lightning-card>
+    </template>
+    
+</template>

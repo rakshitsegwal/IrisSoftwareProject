@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-28-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+        <lightning-card  title={searchedQuestion}>
+            <lightning-layout >
+                <lightning-layout-item vertical-align="stretch">
+                    <p><lightning-formatted-text value={responseValue} ></lightning-formatted-text></p>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-input type='text' label='label' onchange={handleInput}>
+                    </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <lightning-button label="New"  onclick={getResult}></lightning-button>
+                </lightning-layout-item>
+                
+            </lightning-layout>
+            
+            
+            
+        </lightning-card>
+</template>

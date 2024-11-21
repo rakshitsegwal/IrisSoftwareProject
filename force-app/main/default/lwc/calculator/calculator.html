@@ -1,0 +1,17 @@
+<template>
+    <lightning-card variant="narrow" title="Calculator">
+        <lightning-input type="number" name="number1" label="Enter first number" onchange={handlechange}></lightning-input>
+        <lightning-input type="number" name="number2" label="Enter second number" onchange={handlechange}></lightning-input>
+        <lightning-input type="number" name="number3" label="Enter third number" onchange={handlechange}></lightning-input>
+    </lightning-card>
+    <br>
+    <lightning-button variant="success" label="Add" onclick={handleonadd}></lightning-button>&nbsp;&nbsp;&nbsp;
+    <lightning-button variant="brand" label="Sub" onclick={handleonsub}></lightning-button>&nbsp;&nbsp;&nbsp;
+    <lightning-button variant="destructive" label="Multiplication" onclick={handleonmulti}></lightning-button>&nbsp;&nbsp;&nbsp;
+    <lightning-button variant="neutral" label="Div" onclick={handleondiv}></lightning-button>
+    <br>
+    <br>
+    <lightning-card>
+    Result of above mathematical operation is :{result}
+</lightning-card>
+</template>

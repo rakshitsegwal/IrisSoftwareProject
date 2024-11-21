@@ -1,0 +1,23 @@
+<template>
+ <lightning-card title="Parent to Child Demo">
+        <lightning-layout>
+
+            <lightning-layout-item flexibility="auto" padding="around-small"  >
+                <lightning-combobox
+            name="progress"
+            label="Select Your Current Level."
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChangeOfPicklist} ></lightning-combobox>
+            </lightning-layout-item>
+          
+           <!-- <template if:true={pickListSelected}> -->
+            <lightning-layout-item flexibility="auto" padding="around-small">
+               <c-child-Comp onmycustomevent={handleCustomEvent}></c-child-Comp>  
+            </lightning-layout-item>
+         <!--   </template>  -->
+          
+        </lightning-layout>
+    </lightning-card>
+</template>

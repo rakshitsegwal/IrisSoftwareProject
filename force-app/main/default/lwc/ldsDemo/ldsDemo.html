@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-14-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-input
+    name="name"
+    value={name}
+    label="Account Name"
+    onchange={handleChange}
+  ></lightning-input>
+  <lightning-input
+    name="rating"
+    value={rating}
+    label="Rating"
+    onchange={handleChange}
+  ></lightning-input>
+  <lightning-input
+    name="industry"
+    value={industry}
+    label="Industry"
+    onchange={handleChange}
+  ></lightning-input>
+
+  <lightning-button label="Create" onclick={handleClick}></lightning-button>
+</template>
