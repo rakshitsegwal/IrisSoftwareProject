@@ -13,7 +13,7 @@
         <name>CustomTab</name> 
     </types>
     <types>
-        <members>Accounts_Data_Table_Fields.Account_Fields__c</members>
+        <members>Accounts_Data_Table_Fields.Account_Fields</members>
         <name>CustomMetadata</name>
     </types>
     <types>
