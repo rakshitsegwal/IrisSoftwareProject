@@ -1,8 +1,0 @@
-<aura:component implements="force:lightningQuickActionWithoutHeader" access="global" controller="MyAuraController">
-    <aura:attribute name="currentURL" type="String" />
-    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
-
-    <div class="slds-p-around_medium">
-        <p>Captured URL: {!v.currentURL}</p>
-    </div>
-</aura:component>

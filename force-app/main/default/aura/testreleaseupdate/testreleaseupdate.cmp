@@ -1,4 +1,0 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="AccountController" >
-	 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <p>i am testing component</p>
-</aura:component>

@@ -1,5 +1,0 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
-    <aura:attribute name="fields" type="String[]" default="['Address']" />
-        <aura:attribute name="mode" type="String" default="view" />
-    <lightning:recordForm aura:id="myRecordForm" recordId="{!v.recordId}" objectApiName="Lead" fields="{!v.fields}" columns="3" mode="{!v.mode}" onsubmit="{!c.handleSubmit}" />
-</aura:component>

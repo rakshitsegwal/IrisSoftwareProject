@@ -1,0 +1,41 @@
+<template>
+   <lightning-card title="IRIS Accounts Data">
+      <div class="slds-grid">
+         <div class="slds-col slds-size_4-of-5"></div>
+         <div class="slds-col slds-size_1-of-5">
+            <lightning-input
+               type="search"
+               placeholder="Search..."
+               value={searchKey}
+               onchange={handleSearch}
+               class="slds-m-bottom_medium slds-float_right">
+            </lightning-input>
+         </div>
+      </div>
+      <lightning-datatable
+         key-field="Id"
+         data={paginatedData}
+         columns={columns}
+         draft-values={draftValues}
+         onsave={handleSave}>
+      </lightning-datatable>
+      <!-- Pagination and Save Controls -->
+      <div class="slds-grid slds-grid_align-spread slds-m-top_medium">
+         <span class="slds-align_absolute-center">
+            <lightning-button
+               label="Previous"
+               onclick={handlePrevious}
+               disabled={isFirstPage}>
+            </lightning-button>
+            Page {currentPage} of {totalPages}
+            <lightning-button
+               label="Next"
+               onclick={handleNext}
+               disabled={isLastPage}>
+            </lightning-button>
+         </span>
+         <div>
+         </div>
+      </div>
+   </lightning-card>
+</template>
