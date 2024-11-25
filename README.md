@@ -1,4 +1,4 @@
-# IRIS Softwrae Project:
+# IRIS Software Project:
 
 In this project i have created a LWC to fetch all the accounts in a data table using Apex. Features:
 1. The columns are not hard coded for the table there is a custom metadata setting that controls the columns to show bassed on **API names of fields** in a comma seperation **no space should be given** for example you can use Name,Industry,AnnualRevenue,Rating.
